@@ -1,0 +1,22 @@
+<img class="logo" width="120" alt="Angular Logo" 
+src="http://telflow.com/wp-content/uploads/dgit-jumbo.png">
+
+<div class="extra-container">
+  <div>DGIT Australian Company Number Digit Checker</div>
+</div>
+
+<div class="extra-container">
+  <input type="text" class="dgit-input mt-5 width-400 text-center" placeholder="Enter your ACN Number" (keypress)="charRules($event)" [(ngModel)]="txtbox_acn" appEventDisable>
+</div>
+
+<div class="extra-container mb-3 fs-14">
+  <div class="fw-600" [ngClass]="{ 'success' : acn_valid, 'error' : !acn_valid }" *ngIf="acn_validate">{{acn_msg}}</div>
+</div>
+
+<div class="extra-container">
+  <button class="btn blue" (click)="acnCheck()">Validate</button>
+</div>
+
+
+
+

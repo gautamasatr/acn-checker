@@ -1,1 +1,104 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .extra-container {
+    align-items: center;
+  }
+  
+  
+  body {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    margin-top: 60px;
+    font-size: 24px;
+  }
+  
+  .logo {
+    display: block;
+    margin: 20px auto;
+  }
+
+  //font size
+  @for $i from 0 through 1000{
+    .fs-#{$i}{font-size: #{$i}px!important}
+  }
+
+
+  //padding & margin
+  @for $i from 0 through 12{
+    //margin
+    .ma-#{$i}{margin: #{$i*4}px!important}
+    .mt-#{$i}{margin-top: #{$i*4}px!important}
+    .mr-#{$i}{margin-right: #{$i*4}px!important}
+    .mb-#{$i}{margin-bottom: #{$i*4}px!important}
+    .ml-#{$i}{margin-left: #{$i*4}px!important}
+    //padding
+    .pa-#{$i}{padding: #{$i*4}px!important}
+    .pt-#{$i}{padding-top: #{$i*4}px!important}
+    .pr-#{$i}{padding-right: #{$i*4}px!important}
+    .pb-#{$i}{padding-bottom: #{$i*4}px!important}
+    .pl-#{$i}{padding-left: #{$i*4}px!important}
+  }
+
+  //height & width
+  @for $i from 0 through 1000{
+    .width-#{$i}{width: #{$i}px!important}
+    .height-#{$i}{height: #{$i}px!important}
+  }
+
+  //text-align
+  $aligns: 'center', 'right', 'left';
+  @each $align in $aligns{
+    .text-#{$align}{text-align: #{$align}!important;}
+  }
+
+  $weights: 100,200,300,400,500,600,700,800;
+  @each $weight in $weights{
+    .fw-#{$weight}{font-weight: #{$weight}!important;}
+  }
+
+  .error{
+    color: hsl(348, 100%, 61%);
+  }
+
+  .success{
+    color: hsl(141, 71%, 48%);
+  }
+
+  .btn.error{
+    background: hsl(348, 100%, 61%);
+    color: #fff;
+  }
+
+  .btn.blue{
+    background: hsl(204, 86%, 53%);
+    color: #fff;
+  }
+
+  //button
+  .btn{
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 1s;
+  }
+
+  .btn:hover{
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+  }
+
+  button:focus {outline:0;}
+  
